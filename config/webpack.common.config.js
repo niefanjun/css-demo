@@ -25,6 +25,14 @@ const config = {
 				}
 			},
 			{
+				test: /\.(ts|tsx)$/,
+				use: [
+					// 'babel-loader',
+					'ts-loader'
+				],
+				exclude: /node_modules/,
+			},
+			{
 				test: /\.(js|jsx)$/,
 				use: 'babel-loader',
 				exclude: /node_modules/,
@@ -47,7 +55,8 @@ const config = {
 	resolve: {
 		alias: {
 			'@images': path.resolve(__dirname, '../src/images')
-		}
+		},
+		extensions: ['.js','.jsx','.ts','.tsx']
 	},
 	plugins: [
 		new webpack.DllReferencePlugin({
