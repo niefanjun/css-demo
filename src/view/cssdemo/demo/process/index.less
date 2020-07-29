@@ -1,0 +1,12 @@
+.process_show {
+    width: 200px;
+    height: 20px;
+    background-color: #b4b4b4;
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        background-image: linear-gradient(90deg, #5e5cfb, #5ea6fb);
+        width: calc(var(--progress) * 100%/100);
+    }
+}

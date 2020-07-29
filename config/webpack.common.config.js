@@ -45,7 +45,14 @@ const config = {
 							publicPath: '../',
 						}
 					},
-					'css-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							modules: {
+								localIdentName: '[local]__[name]--[hash:4]'
+							}
+						}
+					},
 					'postcss-loader',
 					'less-loader'
 				]
