@@ -1,6 +1,7 @@
 import React, { ComponentType, SFC, FunctionComponent } from 'react';
 import WaveBtn from './waveBtn';
 import Process from './process';
+import Tabs from './tabs';
 
 interface MenuListType {
     name: string,
@@ -8,6 +9,10 @@ interface MenuListType {
 }
 
 export const MenuList:MenuListType[] = [
+    {
+        name: 'tabs',
+        Component: Tabs
+    },
     {
         name: 'waveBtn',
         Component: WaveBtn
@@ -33,7 +38,7 @@ export default DemoControl;
 //     (props: T,children?: ComponentType):FunctionComponent
 // }
 
-// declare type myfunccom<T> = (
+// type myfunccom<T> = (
 //     props: T,
 //     children?: ComponentType
 // ) => FunctionComponent
