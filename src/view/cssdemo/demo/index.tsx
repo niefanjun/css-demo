@@ -2,6 +2,7 @@ import React, { ComponentType, SFC, FunctionComponent } from 'react';
 import WaveBtn from './waveBtn';
 import Process from './process';
 import Tabs from './tabs';
+import GrandientIcon from './gradientIcon';
 
 interface MenuListType {
     name: string,
@@ -9,6 +10,10 @@ interface MenuListType {
 }
 
 export const MenuList:MenuListType[] = [
+    {
+        name: 'grandienticon',
+        Component: GrandientIcon
+    },
     {
         name: 'tabs',
         Component: Tabs
